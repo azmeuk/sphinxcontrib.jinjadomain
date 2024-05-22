@@ -76,7 +76,7 @@ class JinjaIndex(Index):
                 path, 0, info[0],
                 jinja_resource_anchor(method, path), '', '', info[1]
             ])
-        content = content.items()
+        content = list(content.items())
         content.sort(key=lambda (k, v): k)
         return (content, True)
 
